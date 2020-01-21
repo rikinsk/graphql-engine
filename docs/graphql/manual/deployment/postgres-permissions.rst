@@ -10,8 +10,10 @@ Postgres permissions
   :depth: 1
   :local:
 
-If you're running in a controlled environment, you might need to configure the Hasura GraphQL engine to use a
-specific Postgres user that your DBA gives you.
+Hasura GraphQL engine needs certain database privileges to function properly.
+
+Required permissions
+--------------------
 
 The Hasura GraphQL engine needs access to your Postgres database with the following permissions:
 
@@ -22,6 +24,8 @@ The Hasura GraphQL engine needs access to your Postgres database with the follow
 - (optional) To create tables and views via the Hasura console (the admin UI) you'll need the privilege to create
   tables/views. This might not be required when you're working with an existing database.
 
+Sample SQL
+----------
 
 Here's a sample SQL block that you can run on your database to create the right credentials:
 
