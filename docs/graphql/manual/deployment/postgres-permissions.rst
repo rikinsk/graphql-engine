@@ -10,12 +10,12 @@ Postgres permissions
   :depth: 1
   :local:
 
-Hasura GraphQL engine needs certain database privileges to function properly.
+Hasura GraphQL engine needs certain database permissions to function properly.
 
 Required permissions
 --------------------
 
-The Hasura GraphQL engine needs access to your Postgres database with the following permissions:
+The Hasura GraphQL engine needs access to your Postgres database with the following privileges:
 
 - (required) Read & write access on 2 schemas: ``hdb_catalog`` and ``hdb_views``.
 - (required) Read access to the ``information_schema`` and ``pg_catalog`` schemas, to query for list of tables.
@@ -24,10 +24,10 @@ The Hasura GraphQL engine needs access to your Postgres database with the follow
 - (optional) To create tables and views via the Hasura console (the admin UI) you'll need the privilege to create
   tables/views. This might not be required when you're working with an existing database.
 
-Sample SQL
-----------
+Sample SQL for setting up permissions
+-------------------------------------
 
-Here's a sample SQL block that you can run on your database to create the right credentials:
+Here's a sample SQL block that you can modify and run on your database to create the right credentials:
 
 .. code-block:: sql
 
